@@ -1,0 +1,536 @@
+
+# 2025-11-20 19:30:05.322359
++Code the following app
++```
++Zoo Management & Visitor App “ZooMate”**
++
++1. Project Overview
++
++ZooMate is a mobile and web application designed for zoos to improve visitor experience, animal care management, and staff coordination. The app has two main modes:
++
++Visitor Mode – helps visitors navigate the zoo, explore animals, events, and buy tickets.
++
++Staff Mode – helps zookeepers, veterinarians, and management with animal care, feeding schedules, health monitoring, and task tracking.
++
++2. Objectives
++
++Enhance visitor experience with interactive zoo maps, animal info, and event notifications.
++
++Digitize staff workflows for animal care, maintenance, and reporting.
++
++Provide real-time animal health monitoring and task management.
++
++Integrate ticketing, payments, and visitor analytics.
++
++Support staff communication and visitor feedback.
++
++3. Core Features
++3.1 Visitor Mode
++
++Zoo Map & Navigation
++
++Interactive map of zoo zones
++
++Highlight exhibits, restaurants, bathrooms, gift shops
++
++AR animal guides (optional)
++
++Animal Encyclopedia
++
++Photos, species info, diet, conservation status
++
++Audio guides
++
++Event Calendar & Notifications
++
++Feeding shows
++
++Keeper talks
++
++Special events
++
++Tickets & Booking
++
++Online ticket purchase
++
++QR code for entrance
++
++Membership & season pass management
++
++Visitor Feedback & Rating
++
++Rate exhibits
++
++Submit suggestions
++
++3.2 Staff Mode
++
++Animal Management
++
++Animal profiles: species, age, health history, feeding schedule
++
++Health monitoring (weight, vitals, medications)
++
++AI alerts for abnormal behavior or health risks
++
++Feeding & Task Scheduler
++
++Feeding times per animal
++
++Cleaning and maintenance tasks
++
++Task assignment to staff members
++
++Notifications and reminders
++
++Medical Records
++
++Vet reports
++
++Vaccinations
++
++Treatments and medications
++
++History logs
++
++Inventory & Supplies
++
++Food stock tracking
++
++Cleaning supplies
++
++Alerts when inventory is low
++
++Staff Communication
++
++Group and private chat
++
++Task discussion
++
++Emergency alerts
++
++3.3 Shared Features (Visitor + Staff)
++
++News & Updates feed
++
++Emergency notifications
++
++Multi-language support
++
++Push notifications
++
++4. Platform Requirements
++
++Mobile: iOS 13+, Android 9+
++
++Web: Chrome, Firefox, Edge, Safari
++
++Recommended Tech Stack:
++
++Frontend: Flutter (mobile), React (web)
++
++Backend: Node.js / Django
++
++Database: PostgreSQL
++
++Cloud Hosting: AWS / Google Cloud
++
++Optional AI: Health anomaly detection
++
++5. UI/UX Requirements
++
++Visitor Mode:
++
++Colorful, fun, and easy-to-use interface
++
++Map with touch navigation
++
++Quick-access buttons: Map, Animals, Events, Tickets
++
++Staff Mode:
++
++Dashboard with tasks and alerts
++
++Animal cards with vital stats
++
++Notifications for scheduled tasks
++
++Offline mode for staff in areas with poor signal
++
++6. Database Architecture (ERD Description)
++
++Main Entities:
++
++Users (Visitor / Staff)
++
++Animals
++
++Exhibits
++
++Events
++
++Tickets / Bookings
++
++Tasks & Schedules
++
++Inventory / Supplies
++
++Health Records
++
++Feedback
++
++Table Examples:
++
++Users: id, name, email, role (visitor/staff), password_hash, created_at
++
++Animals: id, species, name, age, exhibit_id, health_status, feeding_schedule, medical_history
++
++Exhibits: id, name, zone, description
++
++Events: id, title, description, date_time, location
++
++Tickets: id, visitor_id, type, qr_code, date_of_visit
++
++Tasks: id, staff_id, description, assigned_animal_id, due_date, status
++
++Inventory: id, item_name, quantity, animal_id (optional), threshold_alert
++
++Health Records: id, animal_id, vet_report, treatment, medications, date
++
++7. Agile User Stories
++Visitor Stories
++
++As a visitor, I want to view the zoo map so that I can find animal exhibits easily.
++
++As a visitor, I want to see animal info with photos and descriptions so that I can learn about the animals.
++
++As a visitor, I want to buy tickets in the app to skip the line.
++
++As a visitor, I want to get notifications for feeding shows or events.
++
++Staff Stories
++
++As a zookeeper, I want to see daily feeding schedules so that I can feed animals on time.
++
++As a vet, I want to log medical treatments so that the animal’s health record is up-to-date.
++
++As a staff member, I want to receive alerts for low inventory of food or supplies.
++
++As a staff member, I want to assign cleaning tasks and track completion.
++
++8. Security Requirements
++
++Role-based access control (Visitor / Staff / Admin)
++
++Encrypted data storage (AES-256)
++
++HTTPS for all communication
++
++GDPR/CCPA compliance for visitor data
++
++9. Performance Requirements
++
++App load ≤ 2 seconds
++
++QR ticket scanning ≤ 500 ms
++
++Staff notifications ≤ 1 second
++
++Map navigation smooth, even offline
++
++10. Monetization Model
++
++Free for visitors
++
++Paid premium features:
++
++Memberships
++
++AR guides
++
++Exclusive events
++
++Staff module included with zoo subscription
++
++11. KPIs
++
++Daily active visitors using app
++
++Ticket sales via app
++
++Task completion rate for staff
++
++Animal health alerts resolved
++
++Visitor satisfaction ratings
++```
++
++Generate an app logo and update the app metadata title and description.
+
+# 2025-11-20 19:30:05.323089
++Code the following app
++```
++Zoo Management & Visitor App “ZooMate”**
++
++1. Project Overview
++
++ZooMate is a mobile and web application designed for zoos to improve visitor experience, animal care management, and staff coordination. The app has two main modes:
++
++Visitor Mode – helps visitors navigate the zoo, explore animals, events, and buy tickets.
++
++Staff Mode – helps zookeepers, veterinarians, and management with animal care, feeding schedules, health monitoring, and task tracking.
++
++2. Objectives
++
++Enhance visitor experience with interactive zoo maps, animal info, and event notifications.
++
++Digitize staff workflows for animal care, maintenance, and reporting.
++
++Provide real-time animal health monitoring and task management.
++
++Integrate ticketing, payments, and visitor analytics.
++
++Support staff communication and visitor feedback.
++
++3. Core Features
++3.1 Visitor Mode
++
++Zoo Map & Navigation
++
++Interactive map of zoo zones
++
++Highlight exhibits, restaurants, bathrooms, gift shops
++
++AR animal guides (optional)
++
++Animal Encyclopedia
++
++Photos, species info, diet, conservation status
++
++Audio guides
++
++Event Calendar & Notifications
++
++Feeding shows
++
++Keeper talks
++
++Special events
++
++Tickets & Booking
++
++Online ticket purchase
++
++QR code for entrance
++
++Membership & season pass management
++
++Visitor Feedback & Rating
++
++Rate exhibits
++
++Submit suggestions
++
++3.2 Staff Mode
++
++Animal Management
++
++Animal profiles: species, age, health history, feeding schedule
++
++Health monitoring (weight, vitals, medications)
++
++AI alerts for abnormal behavior or health risks
++
++Feeding & Task Scheduler
++
++Feeding times per animal
++
++Cleaning and maintenance tasks
++
++Task assignment to staff members
++
++Notifications and reminders
++
++Medical Records
++
++Vet reports
++
++Vaccinations
++
++Treatments and medications
++
++History logs
++
++Inventory & Supplies
++
++Food stock tracking
++
++Cleaning supplies
++
++Alerts when inventory is low
++
++Staff Communication
++
++Group and private chat
++
++Task discussion
++
++Emergency alerts
++
++3.3 Shared Features (Visitor + Staff)
++
++News & Updates feed
++
++Emergency notifications
++
++Multi-language support
++
++Push notifications
++
++4. Platform Requirements
++
++Mobile: iOS 13+, Android 9+
++
++Web: Chrome, Firefox, Edge, Safari
++
++Recommended Tech Stack:
++
++Frontend: Flutter (mobile), React (web)
++
++Backend: Node.js / Django
++
++Database: PostgreSQL
++
++Cloud Hosting: AWS / Google Cloud
++
++Optional AI: Health anomaly detection
++
++5. UI/UX Requirements
++
++Visitor Mode:
++
++Colorful, fun, and easy-to-use interface
++
++Map with touch navigation
++
++Quick-access buttons: Map, Animals, Events, Tickets
++
++Staff Mode:
++
++Dashboard with tasks and alerts
++
++Animal cards with vital stats
++
++Notifications for scheduled tasks
++
++Offline mode for staff in areas with poor signal
++
++6. Database Architecture (ERD Description)
++
++Main Entities:
++
++Users (Visitor / Staff)
++
++Animals
++
++Exhibits
++
++Events
++
++Tickets / Bookings
++
++Tasks & Schedules
++
++Inventory / Supplies
++
++Health Records
++
++Feedback
++
++Table Examples:
++
++Users: id, name, email, role (visitor/staff), password_hash, created_at
++
++Animals: id, species, name, age, exhibit_id, health_status, feeding_schedule, medical_history
++
++Exhibits: id, name, zone, description
++
++Events: id, title, description, date_time, location
++
++Tickets: id, visitor_id, type, qr_code, date_of_visit
++
++Tasks: id, staff_id, description, assigned_animal_id, due_date, status
++
++Inventory: id, item_name, quantity, animal_id (optional), threshold_alert
++
++Health Records: id, animal_id, vet_report, treatment, medications, date
++
++7. Agile User Stories
++Visitor Stories
++
++As a visitor, I want to view the zoo map so that I can find animal exhibits easily.
++
++As a visitor, I want to see animal info with photos and descriptions so that I can learn about the animals.
++
++As a visitor, I want to buy tickets in the app to skip the line.
++
++As a visitor, I want to get notifications for feeding shows or events.
++
++Staff Stories
++
++As a zookeeper, I want to see daily feeding schedules so that I can feed animals on time.
++
++As a vet, I want to log medical treatments so that the animal’s health record is up-to-date.
++
++As a staff member, I want to receive alerts for low inventory of food or supplies.
++
++As a staff member, I want to assign cleaning tasks and track completion.
++
++8. Security Requirements
++
++Role-based access control (Visitor / Staff / Admin)
++
++Encrypted data storage (AES-256)
++
++HTTPS for all communication
++
++GDPR/CCPA compliance for visitor data
++
++9. Performance Requirements
++
++App load ≤ 2 seconds
++
++QR ticket scanning ≤ 500 ms
++
++Staff notifications ≤ 1 second
++
++Map navigation smooth, even offline
++
++10. Monetization Model
++
++Free for visitors
++
++Paid premium features:
++
++Memberships
++
++AR guides
++
++Exclusive events
++
++Staff module included with zoo subscription
++
++11. KPIs
++
++Daily active visitors using app
++
++Ticket sales via app
++
++Task completion rate for staff
++
++Animal health alerts resolved
++
++Visitor satisfaction ratings
++```
++
++Generate an app logo and update the app metadata title and description.
